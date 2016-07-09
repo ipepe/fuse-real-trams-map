@@ -1,13 +1,29 @@
 <App>
   <DockPanel>
     <JavaScript File="MainController.js"/>
-    <StatusBarBackground Dock="Top" />
+    <StatusBarBackground Dock="Top"/>
     <StackPanel Dock="Top" Background="#000">
       <Panel Dock="Top" Height="50">
-        <Text Value="Trams" Alignment="Center"
-              FontSize="25" TextColor="#FFF"/>
+        <Text Value="Trams" Alignment="Center" FontSize="25" TextColor="#FFF"/>
+        <DropdownButton />
+
       </Panel>
-      <WebView ux:Name="myWebView" Url="http://google.com/" Dock="Fill">
     </StackPanel>
+
+    <NativeViewHost>
+      <!--<WebView Dock="Fill" Url="https://trams.ipepe.pl/api/v1/trams">-->
+      <WebView Dock="Fill" Url="assets/www/index.html">
+        <PageLoaded>
+          <EvaluateJS Handler="{onPageLoaded}">
+            var result = {
+            url : document.location.href
+            };
+            return result;
+          </EvaluateJS>
+        </PageLoaded>
+      </WebView>
+    </NativeViewHost>
+
+    <BottomBarBackground Dock="Bottom" />
   </DockPanel>
 </App>

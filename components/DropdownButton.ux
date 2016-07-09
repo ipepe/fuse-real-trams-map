@@ -1,0 +1,35 @@
+<Panel ux:Class="DropdownButton" Alignment="CenterRight" Padding="25" Background="#000">
+  <Panel Offset="5,0">
+    <Circle ux:Name="bgCircle" Color="#FFF" Opacity="0.1" Width="20" Height="20"/>
+    <Grid Rows="7,7,7" Alignment="CenterRight">
+      <Circle Color="#FDFDFD" Width="4" Height="4"/>
+      <Circle Color="#FDFDFD" Width="4" Height="4"/>
+      <Circle Color="#FDFDFD" Width="4" Height="4"/>
+    </Grid>
+    <Clicked>
+      <Change Easing="QuadraticInOut" bgCircle.Opacity="0.5" Duration="0.1"/>
+      <Change Easing="QuadraticInOut" bgCircle.Height="40" Duration="0.1"/>
+      <Change Easing="QuadraticInOut" bgCircle.Width="40" Duration="0.1"/>
+    </Clicked>
+  </Panel>
+
+
+  <StackPanel Offset="20,25">
+    <DropdownOption Text="Test1"/>
+    <DropdownOption Text="Testop2"/>
+    <DropdownOption Text="Testdsafsdf3"/>
+    <DropdownOption Text="Test4"/>
+  </StackPanel>
+
+
+
+  <Panel ux:Class="DropdownOption" ux:Name="self">
+    <string ux:Property="Text" />
+    <Rectangle Layer="Background">
+      <SolidColor Color="#FF0000" />
+      <Stroke Brush="#BFD8DD" Width="2"/>
+    </Rectangle>
+    <Text Alignment="CenterLeft" Value="{Property self.Text}" FontSize="20" Margin="10"/>
+  </Panel>
+
+</Panel>
