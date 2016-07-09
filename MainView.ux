@@ -11,17 +11,8 @@
     </StackPanel>
 
     <NativeViewHost>
+      <WebView Dock="Fill" File="assets/www/index.html" />
       <!--<WebView Dock="Fill" Url="https://trams.ipepe.pl/api/v1/trams">-->
-      <WebView Dock="Fill" Url="assets/www/index.html">
-        <PageLoaded>
-          <EvaluateJS Handler="{onPageLoaded}">
-            var result = {
-            url : document.location.href
-            };
-            return result;
-          </EvaluateJS>
-        </PageLoaded>
-      </WebView>
     </NativeViewHost>
 
     <BottomBarBackground Dock="Bottom" />
