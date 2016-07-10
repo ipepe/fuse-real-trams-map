@@ -1,19 +1,18 @@
 <App>
-  <DockPanel>
-    <JavaScript File="MainController.js"/>
-    <StatusBarBackground Dock="Top"/>
-    <StackPanel Dock="Top" Background="#000">
-      <Panel Dock="Top" Height="50">
-        <Text Value="Trams" Alignment="Center" FontSize="25" TextColor="#FFF"/>
-        <ipepe.SettingsButton />
 
-      </Panel>
-    </StackPanel>
+    <DockPanel>
+      <JavaScript File="AppController.js"/>
+      <StatusBarBackground Dock="Top"/>
+      <StackPanel Dock="Top" Background="#000">
+        <Panel Dock="Top" Height="50">
+          <Text Value="Trams" Alignment="Center" FontSize="25" TextColor="#FFF"/>
+          <ipepe.SettingsButton Options="{settingsOptions}" />
+        </Panel>
+      </StackPanel>
+      <NativeViewHost >
+        <WebView File="assets/www/index.html" />
+      </NativeViewHost>
+      <BottomBarBackground Dock="Bottom" />
+    </DockPanel>
 
-    <NativeViewHost>
-      <WebView Dock="Fill" File="assets/www/index.html" />
-    </NativeViewHost>
-
-    <BottomBarBackground Dock="Bottom" />
-  </DockPanel>
 </App>

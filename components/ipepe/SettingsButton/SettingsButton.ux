@@ -1,4 +1,5 @@
 <Panel ux:Class="ipepe.SettingsButton">
+  <object ux:Property="Options"/>
   <JavaScript File="SettingsButton.js"/>
   <Panel ux:Name="button" Alignment="CenterRight" HitTestMode="LocalBoundsAndChildren" Padding="20" Clicked="{buttonClicked}">
     <Circle ux:Name="buttonBgCircle" Color="#FFF" Opacity="0" Width="20" Height="20" Margin="-17,0"/>
@@ -12,13 +13,17 @@
       <Change Easing="QuadraticInOut" buttonBgCircle.Height="40" Duration="0.1"/>
       <Change Easing="QuadraticInOut" buttonBgCircle.Width="40" Duration="0.1"/>
     </WhilePressed>
+    <Clicked>
+      <GiveFocus Target="list"/>
+    </Clicked>
   </Panel>
-  <Panel ux:Name="list"  LayoutRole="Inert" Alignment="CenterRight" Color="#eee">
+  <Panel ux:Name="list"  LayoutRole="Inert" Alignment="CenterRight" Color="#eee" MinWidth="200" Focus.IsFocusable="true"
+         Focus.Lost="{focusLost}">
     <Translation RelativeTo="Size" RelativeNode="this" Y="1" />
     <StackPanel >
-      <Each Items="{items}" >
+      <Each Items="{Property Options}" >
         <Panel ux:Name="item" Clicked="{itemClicked}" Background="#eee">
-          <Text Alignment="CenterLeft" Value="{text}" FontSize="20" Margin="15" />
+          <Text Alignment="CenterLeft" Value="{}" FontSize="20" Margin="15" />
           <WhilePressed>
             <Change Easing="QuadraticInOut" item.Background="#ddd" Duration="0.1"/>
           </WhilePressed>

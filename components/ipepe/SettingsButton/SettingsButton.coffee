@@ -11,5 +11,8 @@ class SettingsButtonComponent
   itemClicked: (event) =>
     @selectedItem.value = event.data
     @isShown.value = false
+    
+  focusLost: =>
+    @isShown.value = false
 
 module.exports = new SettingsButtonComponent()

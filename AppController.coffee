@@ -1,6 +1,7 @@
 Observable = require('FuseJS/Observable')
 
-class App
+class AppController
+  settingsOptions: Observable('Map', 'Credits', 'Settings', 'Contact')
   constructor: ->
     console.log('App building...', new Date().toString())
 
@@ -11,4 +12,4 @@ class App
     console.log('Settings!!!!')
 
 
-module.exports = new App()
+module.exports = new AppController()
