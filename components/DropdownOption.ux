@@ -1,0 +1,8 @@
+<Panel ux:Class="DropdownOption" ux:Name="self">
+<string ux:Property="Text" />
+<Rectangle Layer="Background">
+  <SolidColor Color="#FF0000" />
+  <Stroke Brush="#BFD8DD" Width="2"/>
+</Rectangle>
+<Text Alignment="CenterLeft" Value="{Property self.Text}" FontSize="20" Margin="10"/>
+</Panel>

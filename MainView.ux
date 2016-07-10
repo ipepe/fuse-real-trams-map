@@ -5,7 +5,7 @@
     <StackPanel Dock="Top" Background="#000">
       <Panel Dock="Top" Height="50">
         <Text Value="Trams" Alignment="Center" FontSize="25" TextColor="#FFF"/>
-        <DropdownButton />
+        <DropdownMenu />
 
       </Panel>
     </StackPanel>

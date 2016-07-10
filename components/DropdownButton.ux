@@ -12,24 +12,4 @@
       <Change Easing="QuadraticInOut" bgCircle.Width="40" Duration="0.1"/>
     </Clicked>
   </Panel>
-
-
-  <StackPanel Offset="20,25">
-    <DropdownOption Text="Test1"/>
-    <DropdownOption Text="Testop2"/>
-    <DropdownOption Text="Testdsafsdf3"/>
-    <DropdownOption Text="Test4"/>
-  </StackPanel>
-
-
-
-  <Panel ux:Class="DropdownOption" ux:Name="self">
-    <string ux:Property="Text" />
-    <Rectangle Layer="Background">
-      <SolidColor Color="#FF0000" />
-      <Stroke Brush="#BFD8DD" Width="2"/>
-    </Rectangle>
-    <Text Alignment="CenterLeft" Value="{Property self.Text}" FontSize="20" Margin="10"/>
-  </Panel>
-
 </Panel>
