@@ -1,9 +1,0 @@
-<Panel ux:Class="DropdownMenu">
-  <DropdownButton />
-  <StackPanel Offset="20,25">
-    <DropdownOption Text="Test1"/>
-    <DropdownOption Text="Testop2"/>
-    <DropdownOption Text="Testdsafsdf3"/>
-    <DropdownOption Text="Test4"/>
-  </StackPanel>
-</Panel>

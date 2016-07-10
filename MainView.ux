@@ -5,14 +5,13 @@
     <StackPanel Dock="Top" Background="#000">
       <Panel Dock="Top" Height="50">
         <Text Value="Trams" Alignment="Center" FontSize="25" TextColor="#FFF"/>
-        <DropdownMenu />
+        <ipepe.SettingsButton />
 
       </Panel>
     </StackPanel>
 
     <NativeViewHost>
       <WebView Dock="Fill" File="assets/www/index.html" />
-      <!--<WebView Dock="Fill" Url="https://trams.ipepe.pl/api/v1/trams">-->
     </NativeViewHost>
 
     <BottomBarBackground Dock="Bottom" />
