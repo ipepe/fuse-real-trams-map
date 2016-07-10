@@ -8,8 +8,8 @@ class AppController
   onPageLoaded: (url) ->
     console.log('Url:', url)
 
-  settingsButtonClicked: ->
-    console.log('Settings!!!!')
+  settingChosenCallback: (route) ->
+    console.log('transitionCallback!!!!', route)
 
 
 module.exports = new AppController()

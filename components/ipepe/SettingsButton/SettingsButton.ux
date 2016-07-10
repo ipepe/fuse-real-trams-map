@@ -1,5 +1,6 @@
 <Panel ux:Class="ipepe.SettingsButton">
   <object ux:Property="Options"/>
+  <object ux:Property="Callback"/>
   <JavaScript File="SettingsButton.js"/>
   <Panel ux:Name="button" Alignment="CenterRight" HitTestMode="LocalBoundsAndChildren" Padding="20" Clicked="{buttonClicked}">
     <Circle ux:Name="buttonBgCircle" Color="#FFF" Opacity="0" Width="20" Height="20" Margin="-17,0"/>
